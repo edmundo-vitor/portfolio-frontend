@@ -1,17 +1,20 @@
-import { Flex } from '@chakra-ui/react'
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
-import { Stack, Text, Link } from '@chakra-ui/react';
 import {
+   Flex,
    Card,
    CardHeader,
    CardBody,
    CardFooter,
    Avatar,
    Box,
-   Heading
+   Heading,
+   Stack,
+   Text,
+   Link,
+   Tag,
+   TagLabel
 } from '@chakra-ui/react'
-import { Tag, TagLabel } from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 
 const technologies1 = [

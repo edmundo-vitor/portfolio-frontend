@@ -1,7 +1,17 @@
 import { useEffect } from 'react';
 
 import { useInView } from 'react-intersection-observer';
-import { Stack, Text, Button } from '@chakra-ui/react';
+import {
+   Stack,
+   Text,
+   Image,
+   List,
+   ListItem,
+   ListIcon
+} from '@chakra-ui/react';
+
+import { MdCheckCircle } from 'react-icons/md'
+
 
 export default function Services({ items }) {
    const { ref, inView } = useInView(
@@ -47,26 +57,80 @@ export default function Services({ items }) {
          </Text>
 
 
-         <Stack direction='row'>
-            <Button
-               // bgGradient='linear(to-b, #FBD189, #F59983)'
-               bgColor='#373737'
-               width='10vw'
-               borderRadius='100px'
-               fontSize='xl'
+         <Stack direction='row' spacing={5}>
+            <Stack
+               direction='column'
+               align='center'
+               borderRadius='20px'
+               padding='20px'
+               backgroundColor='#212121'
+               minW='20vw'
+               maxW='20vw'
             >
-               Backend
-            </Button>
+               <Image src='back-logo.png' w='190px' h='200px' />
 
-            <Button
-               // bgGradient='linear(to-b, #FBD189, #F59983)'
-               bgColor='#373737'
-               width='10vw'
-               borderRadius='100px'
-               fontSize='xl'
+               <Text
+                  fontSize='2xl'
+                  fontWeight='extrabold'
+               >
+                  Backend
+               </Text>
+
+               <List spacing={3} width='100%'>
+                  <ListItem>
+                     <ListIcon as={MdCheckCircle} color='green.500' />
+                     Desenvolvimento de APIs REST
+                  </ListItem>
+                  <ListItem>
+                     <ListIcon as={MdCheckCircle} color='green.500' />
+                     Integração entre microsserviços
+                  </ListItem>
+                  <ListItem>
+                     <ListIcon as={MdCheckCircle} color='green.500' />
+                     Banco de dados SQL e NoSQL
+                  </ListItem>
+                  <ListItem>
+                     <ListIcon as={MdCheckCircle} color='green.500' />
+                     DevOps
+                  </ListItem>
+               </List>
+            </Stack>
+
+            <Stack
+               direction='column'
+               align='center'
+               borderRadius='20px'
+               padding='20px'
+               backgroundColor='#212121'
+               minW='20vw'
+               maxW='20vw'
             >
-               Frontend
-            </Button>
+               <Image src='front-logo.png' w='220px' h='190px' />
+
+               <Text
+                  fontSize='2xl'
+                  fontWeight='extrabold'
+               >
+                  Frontend
+               </Text>
+
+               <List spacing={3} width='100%'>
+                  <ListItem>
+                     <ListIcon as={MdCheckCircle} color='green.500' />
+                     Desenvolvimento de landing pages
+                  </ListItem>
+                  <ListItem>
+                     <ListIcon as={MdCheckCircle} color='green.500' />
+                     Desenvolvimento de sistemas e dashboards
+                  </ListItem>
+                  <ListItem>
+                     <ListIcon as={MdCheckCircle} color='green.500' />
+                     Desenvolvimento de novas funcionalidades
+                  </ListItem>
+               </List>
+            </Stack>
+
+
          </Stack>
       </Stack>
    );
