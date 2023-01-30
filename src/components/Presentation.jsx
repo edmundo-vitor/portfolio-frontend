@@ -1,6 +1,7 @@
-import { Flex, Image, Text, Stack, Button, Link } from '@chakra-ui/react'
+import { Flex, Image, Text, Stack, Link } from '@chakra-ui/react'
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
+import { SocialIcon } from 'react-social-icons';
 
 export default function Presentation({ items }) {
    const { ref, inView } = useInView(
@@ -73,20 +74,10 @@ export default function Presentation({ items }) {
 
                   <Stack spacing={5}>
                      <Text fontSize='3xl'>Trabalho com desenvolvimento web com foco no backend, mas também tenho conhecimento no frontend.</Text>
-                     <Button
-                        href='#experience'
-                        bgGradient='linear(to-b, #FBD189, #F59983)'
-                        width='10vw'
-                        borderRadius='100px'
-                        fontSize='xl'
-                     >
-
-
-                     </Button>
                      <Link
                         href='#experience'
                         bgGradient='linear(to-b, #FBD189, #F59983)'
-                        width='10vw'
+                        width='9vw'
                         borderRadius='100px'
                         fontSize='xl'
                         textAlign='center'
@@ -94,9 +85,27 @@ export default function Presentation({ items }) {
                         _hover={{
                            textDecoration: 'none'
                         }}
+                        p='8px'
                      >
                         saiba mais
                      </Link>
+
+                     <Stack
+                        direction='row'
+                        spacing={6}
+                        mt='40px !important'
+                     >
+                        <SocialIcon
+                           url='https://www.linkedin.com/in/edmundo-vitor/'
+                        />
+                        <SocialIcon
+                           url='https://github.com/edmundo-vitor'
+                           bgColor='#fff'
+                        />
+                        <SocialIcon
+                           url='https://www.instagram.com/edmundo_vtr/'
+                        />
+                     </Stack>
                   </Stack>
                </Stack>
 

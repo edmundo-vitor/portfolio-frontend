@@ -111,6 +111,7 @@ export default function Experience({ items }) {
                fontSize='3xl'
                bgGradient='linear(to-b, #FBD189, #F59983)'
                fontWeight='extrabold'
+               bgClip='text'
             >
                Experiência
             </Text>
