@@ -12,13 +12,13 @@ export default function Services({ items }) {
       }
    );
 
-   const { setNavItens } = items;
+   const { setNavItems } = items;
 
    useEffect(() => {
       if (inView) {
-         setNavItens(prevState => ({ ...prevState, servicos: true }));
+         setNavItems(prevState => ({ ...prevState, servicos: true }));
       } else {
-         setNavItens(prevState => ({ ...prevState, servicos: false }))
+         setNavItems(prevState => ({ ...prevState, servicos: false }))
       }
    }, [inView])
 

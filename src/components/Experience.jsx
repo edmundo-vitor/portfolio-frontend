@@ -2,11 +2,16 @@ import { Flex } from '@chakra-ui/react'
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { Stack, Text, Link } from '@chakra-ui/react';
-import { Card, CardHeader, CardBody, CardFooter, Avatar, Box, Heading } from '@chakra-ui/react'
 import {
-   Tag,
-   TagLabel
+   Card,
+   CardHeader,
+   CardBody,
+   CardFooter,
+   Avatar,
+   Box,
+   Heading
 } from '@chakra-ui/react'
+import { Tag, TagLabel } from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 
 const technologies1 = [
@@ -76,13 +81,13 @@ export default function Experience({ items }) {
       }
    );
 
-   const { setNavItens } = items;
+   const { setNavItems } = items;
 
    useEffect(() => {
       if (inView) {
-         setNavItens(prevState => ({ ...prevState, experiencia: true }));
+         setNavItems(prevState => ({ ...prevState, experiencia: true }));
       } else {
-         setNavItens(prevState => ({ ...prevState, experiencia: false }))
+         setNavItems(prevState => ({ ...prevState, experiencia: false }))
       }
    }, [inView])
 

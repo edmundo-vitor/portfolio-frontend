@@ -21,11 +21,11 @@ const defaultNavItems = {
 }
 
 export default function App() {
-   const [navItens, setNavItens] = useState(initialNavItems)
+   const [navItems, setNavItems] = useState(initialNavItems)
 
    const items = {
-      'navItens': navItens,
-      'setNavItens': setNavItens,
+      'navItems': navItems,
+      'setNavItems': setNavItems,
       'defaultNavItems': defaultNavItems
    }
 

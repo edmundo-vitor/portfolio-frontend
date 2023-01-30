@@ -1,11 +1,10 @@
-import { useState } from 'react'
-import { Flex, Image, Link } from '@chakra-ui/react'
+import { Flex, Image } from '@chakra-ui/react'
 import NavItem from './NavItem'
 
 
 export default function NavBar({ items }) {
 
-   let { navItens, defaultNavItems, setNavItens } = items;
+   let { navItems, defaultNavItems, setNavItems } = items;
 
    return (
       <Flex
@@ -28,30 +27,30 @@ export default function NavBar({ items }) {
             <NavItem
                name='Inicio'
                href='#presentation'
-               itemActive={navItens.inicio}
-               onClick={() => setNavItens({ ...defaultNavItems, inicio: true })}
+               itemActive={navItems.inicio}
+               onClick={() => setNavItems({ ...defaultNavItems, inicio: true })}
             />
             <NavItem
                name='Experiencia'
                href='#experience'
-               itemActive={navItens.experiencia}
-               onClick={() => setNavItens({ ...defaultNavItems, experiencia: true })}
+               itemActive={navItems.experiencia}
+               onClick={() => setNavItems({ ...defaultNavItems, experiencia: true })}
             />
             <NavItem
                name='Serviços'
                href='#services'
-               itemActive={navItens.servicos}
-               onClick={() => setNavItens({ ...defaultNavItems, servicos: true })}
+               itemActive={navItems.servicos}
+               onClick={() => setNavItems({ ...defaultNavItems, servicos: true })}
             />
             <NavItem
                name='Portfólio'
-               itemActive={navItens.portfolio}
-               onClick={() => setNavItens({ ...defaultNavItems, portfolio: true })}
+               itemActive={navItems.portfolio}
+               onClick={() => setNavItems({ ...defaultNavItems, portfolio: true })}
             />
             <NavItem
                name='Contatos'
-               itemActive={navItens.contatos}
-               onClick={() => setNavItens({ ...defaultNavItems, contatos: true })}
+               itemActive={navItems.contatos}
+               onClick={() => setNavItems({ ...defaultNavItems, contatos: true })}
             />
          </Flex>
 

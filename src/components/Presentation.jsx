@@ -11,13 +11,13 @@ export default function Presentation({ items }) {
       }
    );
 
-   const { setNavItens } = items;
+   const { setNavItems } = items;
 
    useEffect(() => {
       if (inView) {
-         setNavItens(prevState => ({ ...prevState, inicio: true }));
+         setNavItems(prevState => ({ ...prevState, inicio: true }));
       } else {
-         setNavItens(prevState => ({ ...prevState, inicio: false }))
+         setNavItems(prevState => ({ ...prevState, inicio: false }))
       }
    }, [inView])
 
