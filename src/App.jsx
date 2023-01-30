@@ -3,12 +3,13 @@ import NavBar from './components/NavBar'
 import Presentation from './components/Presentation'
 import Experience from './components/Experience'
 import Services from './components/Services'
+import Projects from './components/Projects'
 
 const initialNavItems = {
    inicio: true,
    experiencia: false,
    servicos: false,
-   portfolio: false,
+   projetos: false,
    contatos: false
 }
 
@@ -16,7 +17,7 @@ const defaultNavItems = {
    inicio: false,
    experiencia: false,
    servicos: false,
-   portfolio: false,
+   projetos: false,
    contatos: false
 }
 
@@ -35,6 +36,7 @@ export default function App() {
          <Presentation items={items} />
          <Experience items={items} />
          <Services items={items} />
+         <Projects items={items} />
       </>
    )
 

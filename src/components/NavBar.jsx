@@ -43,9 +43,10 @@ export default function NavBar({ items }) {
                onClick={() => setNavItems({ ...defaultNavItems, servicos: true })}
             />
             <NavItem
-               name='Portfólio'
-               itemActive={navItems.portfolio}
-               onClick={() => setNavItems({ ...defaultNavItems, portfolio: true })}
+               name='Projetos'
+               href='#projects'
+               itemActive={navItems.projetos}
+               onClick={() => setNavItems({ ...defaultNavItems, projetos: true })}
             />
             <NavItem
                name='Contatos'

@@ -1,4 +1,5 @@
 import { Flex, Image, Text, Stack, Link } from '@chakra-ui/react'
+import { ArrowDownIcon } from '@chakra-ui/icons'
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { SocialIcon } from 'react-social-icons';
@@ -87,7 +88,7 @@ export default function Presentation({ items }) {
                         }}
                         p='8px'
                      >
-                        saiba mais
+                        saiba mais <ArrowDownIcon />
                      </Link>
 
                      <Stack
@@ -97,13 +98,16 @@ export default function Presentation({ items }) {
                      >
                         <SocialIcon
                            url='https://www.linkedin.com/in/edmundo-vitor/'
+                           target="_blank"
                         />
                         <SocialIcon
                            url='https://github.com/edmundo-vitor'
                            bgColor='#fff'
+                           target="_blank"
                         />
                         <SocialIcon
                            url='https://www.instagram.com/edmundo_vtr/'
+                           target="_blank"
                         />
                      </Stack>
                   </Stack>

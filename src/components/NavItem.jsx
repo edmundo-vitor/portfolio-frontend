@@ -1,6 +1,6 @@
 import { Link } from '@chakra-ui/react'
 
-export default function NavItem({ name, itemActive, onClick, href }, props) {
+export default function NavItem({ name, itemActive, onClick, href }) {
    return (
       <Link
          m='20px'
