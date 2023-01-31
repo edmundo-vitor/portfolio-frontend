@@ -76,10 +76,14 @@ export default function NavBar({ items }) {
             width='100vw'
             height='6vh'
             padding='10px'
-            justifyContent='end'
+            justifyContent='space-between'
             zIndex={100}
             display={{ base: 'flex', sm: 'none' }}
+
          >
+            <Image
+               src='eddev-logo.png'
+            />
             <Menu>
                <svg width="0" height="0">
                   <linearGradient id="gradient" x1="100%" y1="100%" x2="0%" y2="0%">

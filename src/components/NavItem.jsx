@@ -3,7 +3,8 @@ import { Link } from '@chakra-ui/react'
 export default function NavItem({ name, itemActive, onClick, href }) {
    return (
       <Link
-         m='20px'
+         m={{ base: '10px', md: '20px' }}
+         fontSize={{ base: 'sm', sm: 'md', md: 'lg' }}
          style={
             itemActive ?
                ({

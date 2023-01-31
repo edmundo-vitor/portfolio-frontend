@@ -23,6 +23,13 @@ export default function Presentation({ items }) {
       }
    }, [inView])
 
+   const headingSize = {
+      base: '2xl',
+      sm: '3xl',
+      md: '4xl',
+      lg: '5xl'
+   }
+
    return (
       <>
          <Flex
@@ -34,10 +41,11 @@ export default function Presentation({ items }) {
             ref={ref}
          >
             <Stack
-               flexDirection='row'
+               flexDirection={{ base: 'column', sm: 'row' }}
                align='flex-end'
                justify='center'
                width='100%'
+               alignItems={{ base: 'center', sm: 'end' }}
             >
                <Stack
                   flexDirection='column'
@@ -45,12 +53,13 @@ export default function Presentation({ items }) {
                   spacing={3}
                   height='100%'
                   justify='center'
-                  maxWidth='30vw'
-                  marginRight={20}
+                  maxWidth={{ base: '90vw', sm: '35vw' }}
+                  padding={{ base: '30px', sm: '0px' }}
+                  marginRight={{ base: 0, sm: 20 }}
                >
                   <Stack spacing={-1}>
                      <Text
-                        fontSize='5xl'
+                        fontSize={headingSize}
                         bgGradient='linear(to-b, #FBD189, #F59983)'
                         bgClip='text'
                         fontWeight='extrabold'
@@ -58,13 +67,13 @@ export default function Presentation({ items }) {
                         Olá,
                      </Text>
                      <Text
-                        fontSize='6xl'
+                        fontSize={headingSize}
                         fontWeight='extrabold'
                      >
                         sou o Edmundo.
                      </Text>
                      <Text
-                        fontSize='4xl'
+                        fontSize={{ base: '2xl', sm: '3xl', md: '4xl' }}
                         bgGradient='linear(to-b, #FBD189, #F59983)'
                         bgClip='text'
                         fontWeight='extrabold'
@@ -74,13 +83,14 @@ export default function Presentation({ items }) {
                   </Stack>
 
                   <Stack spacing={5}>
-                     <Text fontSize='3xl'>Trabalho com desenvolvimento web com foco no backend, mas também tenho conhecimento no frontend.</Text>
+                     <Text fontSize={{ sm: 'lg', md: 'xl', lg: '3xl' }}>Trabalho com desenvolvimento web com foco no backend, mas também tenho conhecimento no frontend.</Text>
+
                      <Link
                         href='#experience'
                         bgGradient='linear(to-b, #FBD189, #F59983)'
-                        width='9vw'
+                        width={{ base: '120px', sm: '150px', md: '160px', lg: '180px' }}
                         borderRadius='100px'
-                        fontSize='xl'
+                        fontSize={{ sm: 'md', md: 'lg', lg: 'xl' }}
                         textAlign='center'
                         fontWeight='extrabold'
                         _hover={{
@@ -94,30 +104,50 @@ export default function Presentation({ items }) {
                      <Stack
                         direction='row'
                         spacing={6}
-                        mt='40px !important'
+                        mt={{ base: '30px !important', sm: '40px !important' }}
                      >
-                        <SocialIcon
-                           url='https://www.linkedin.com/in/edmundo-vitor/'
-                           target="_blank"
-                        />
-                        <SocialIcon
-                           url='https://github.com/edmundo-vitor'
-                           bgColor='#fff'
-                           target="_blank"
-                        />
-                        <SocialIcon
-                           url='https://www.instagram.com/edmundo_vtr/'
-                           target="_blank"
-                        />
+                        <Stack
+                           width={{ base: '30px', sm: '30px', md: '40px', lg: '50px' }}
+                           height={{ base: '30px', sm: '30px', md: '40px', lg: '50px' }}
+                        >
+                           <SocialIcon
+                              url='https://www.linkedin.com/in/edmundo-vitor/'
+                              target="_blank"
+                              style={{ width: '100%', height: '100%' }}
+                           />
+                        </Stack>
+
+                        <Stack
+                           width={{ base: '30px', sm: '30px', md: '40px', lg: '50px' }}
+                           height={{ base: '30px', sm: '30px', md: '40px', lg: '50px' }}
+                        >
+                           <SocialIcon
+                              url='https://github.com/edmundo-vitor'
+                              bgColor='#fff'
+                              target="_blank"
+                              style={{ width: '100%', height: '100%' }}
+                           />
+                        </Stack>
+
+                        <Stack
+                           width={{ base: '30px', sm: '30px', md: '40px', lg: '50px' }}
+                           height={{ base: '30px', sm: '30px', md: '40px', lg: '50px' }}
+                        >
+                           <SocialIcon
+                              url='https://www.instagram.com/edmundo_vtr/'
+                              target="_blank"
+                              style={{ width: '100%', height: '100%' }}
+                           />
+                        </Stack>
                      </Stack>
                   </Stack>
                </Stack>
 
                <Image
                   src='perfil.png'
-                  width='40vw'
-                  minWidth='20vw'
-                  maxWidth='45vw'
+                  width={{ base: '80vw', sm: '40vw' }}
+                  minWidth={{ base: '40vw', sm: '20vw' }}
+                  maxWidth={{ base: '70vw', sm: '45vw' }}
                />
             </Stack>
          </Flex>
