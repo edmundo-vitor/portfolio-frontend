@@ -5,7 +5,8 @@ import {
    MenuButton,
    MenuList,
    MenuItem,
-   IconButton
+   IconButton,
+   Stack
 } from '@chakra-ui/react'
 
 import { MdMenu } from 'react-icons/md';
@@ -105,59 +106,40 @@ export default function NavBar({ items }) {
                   color='#FFF'
                   border='none'
                >
-                  <MenuItem
-                     backgroundColor='#282828'
-                     onClick={() => setNavItems({ ...defaultNavItems, inicio: true })}
+                  <Stack
+                     spacing={10}
+                     padding={10}
+                     alignItems='flex-start'
+                     width='100%'
                   >
                      <NavItem
                         name='Inicio'
                         href='#presentation'
                         itemActive={navItems.inicio}
+                        onClick={() => setNavItems({ ...defaultNavItems, inicio: true })}
                      />
-                  </MenuItem>
 
-                  <MenuItem
-                     backgroundColor='#282828'
-                     onClick={() => setNavItems({ ...defaultNavItems, experiencia: true })}
-                  >
                      <NavItem
                         name='Experiencia'
                         href='#experience'
                         itemActive={navItems.experiencia}
                      />
-                  </MenuItem>
 
-                  <MenuItem
-                     backgroundColor='#282828'
-                     onClick={() => setNavItems({ ...defaultNavItems, servicos: true })}
-                  >
                      <NavItem
                         name='Serviços'
                         href='#services'
                         itemActive={navItems.servicos}
+                        onClick={() => setNavItems({ ...defaultNavItems, servicos: true })}
                      />
-                  </MenuItem>
 
-                  <MenuItem
-                     backgroundColor='#282828'
-                     onClick={() => setNavItems({ ...defaultNavItems, projetos: true })}
-                  >
                      <NavItem
                         name='Projetos'
                         href='#projects'
                         itemActive={navItems.projetos}
+                        onClick={() => setNavItems({ ...defaultNavItems, projetos: true })}
                      />
-                  </MenuItem>
 
-                  <MenuItem
-                     backgroundColor='#282828'
-                     onClick={() => setNavItems({ ...defaultNavItems, contatos: true })}
-                  >
-                     <NavItem
-                        name='Contatos'
-                        itemActive={navItems.contatos}
-                     />
-                  </MenuItem>
+                  </Stack>
                </MenuList>
             </Menu>
          </Flex>

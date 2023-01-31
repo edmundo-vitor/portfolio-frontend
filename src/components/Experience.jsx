@@ -101,27 +101,28 @@ export default function Experience({ items }) {
             flexDirection='column'
             bgColor='#191919'
             width='100vw'
-            height='100vh'
+            minHeight='100vh'
             maxWidth='100%'
             ref={ref}
             justifyContent='center'
             alignItems='center'
             color='#fff'
             zIndex={0}
-            spacing={20}
+            spacing={{ base: 5, sm: 5 }}
          >
             <Text
                fontSize='3xl'
                bgGradient='linear(to-b, #FBD189, #F59983)'
                fontWeight='extrabold'
                bgClip='text'
+               mt={{ base: '6vh' }}
             >
                Experiência
             </Text>
 
             <Stack
                flexDirection='row'
-               maxWidth='50%'
+               // maxWidth='50%'
                alignItems='center'
             >
                <Cards />
@@ -134,16 +135,16 @@ export default function Experience({ items }) {
 export function Cards() {
    return (
       <Stack
-         direction='row'
-         maxHeight='70vh'
-         maxWidth='100vw'
+         direction={{ base: 'column', md: 'row' }}
+         maxHeight='100vh'
+         width='90vw'
          opacity={0.9}
          justify='center'
          spacing={10}
       >
          <Card
-            minWidth='60%'
-            maxWidth='60%'
+            minWidth={{ base: '100%', md: '40%' }}
+            maxWidth={{ base: '100%', md: '40%' }}
             minHeight='50%'
             maxHeight='50%'
             bgColor='#303030'
@@ -211,8 +212,8 @@ export function Cards() {
          </Card>
 
          <Card
-            minWidth='60%'
-            maxWidth='60%'
+            minWidth={{ base: '100%', md: '40%' }}
+            maxWidth={{ base: '100%', md: '40%' }}
             minHeight='50%'
             maxHeight='50%'
             bgColor='#303030'

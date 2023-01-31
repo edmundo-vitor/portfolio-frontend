@@ -9,16 +9,14 @@ const initialNavItems = {
    inicio: true,
    experiencia: false,
    servicos: false,
-   projetos: false,
-   contatos: false
+   projetos: false
 }
 
 const defaultNavItems = {
    inicio: false,
    experiencia: false,
    servicos: false,
-   projetos: false,
-   contatos: false
+   projetos: false
 }
 
 export default function App() {
@@ -34,9 +32,9 @@ export default function App() {
       <>
          <NavBar items={items} />
          <Presentation items={items} />
-         {/* <Experience items={items} />
-         <Services items={items} />
-         <Projects items={items} /> */}
+         <Experience items={items} />
+         {/* <Services items={items} /> */}
+         {/* <Projects items={items} /> */}
       </>
    )
 
