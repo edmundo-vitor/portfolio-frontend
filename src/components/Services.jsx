@@ -46,6 +46,7 @@ export default function Services({ items }) {
          color='#fff'
          zIndex={0}
          spacing={{ base: 5, sm: 6, md: 10 }}
+         padding='20px'
       >
          <Text
             fontSize='3xl'

@@ -48,7 +48,7 @@ export default function Projects({ items }) {
          </Text>
 
          <Card
-            maxW='sm'
+            width='80vw'
             bgColor='#303030'
             color='#fff'
          >

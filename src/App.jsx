@@ -34,7 +34,7 @@ export default function App() {
          <Presentation items={items} />
          <Experience items={items} />
          <Services items={items} />
-         {/* <Projects items={items} /> */}
+         <Projects items={items} />
       </>
    )
 

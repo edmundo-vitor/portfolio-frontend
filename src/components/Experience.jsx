@@ -109,6 +109,7 @@ export default function Experience({ items }) {
             color='#fff'
             zIndex={0}
             spacing={{ base: 5, sm: 5 }}
+            padding='20px'
          >
             <Text
                fontSize='3xl'
