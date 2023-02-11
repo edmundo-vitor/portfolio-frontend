@@ -60,11 +60,6 @@ export default function NavBar({ items }) {
                   itemActive={navItems.projetos}
                   onClick={() => setNavItems({ ...defaultNavItems, projetos: true })}
                />
-               <NavItem
-                  name='Contatos'
-                  itemActive={navItems.contatos}
-                  onClick={() => setNavItems({ ...defaultNavItems, contatos: true })}
-               />
             </Flex>
 
             <Flex></Flex>
