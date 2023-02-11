@@ -122,7 +122,6 @@ export default function Experience({ items }) {
 
             <Stack
                flexDirection='row'
-               // maxWidth='50%'
                alignItems='center'
             >
                <Cards />

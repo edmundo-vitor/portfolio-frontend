@@ -33,7 +33,7 @@ export default function App() {
          <NavBar items={items} />
          <Presentation items={items} />
          <Experience items={items} />
-         {/* <Services items={items} /> */}
+         <Services items={items} />
          {/* <Projects items={items} /> */}
       </>
    )
